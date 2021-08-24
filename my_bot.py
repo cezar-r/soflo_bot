@@ -207,6 +207,7 @@ async def on_message(message):
 		for embed in embeds:
 			embed_dict = embed.to_dict() # it's content of embed in dict
 			try:
+				print(embed_dict)
 				if embed_dict['footer']['text'] == '@Kash Monitors • Stock Numbers':
 					new_embed = snf.reformat_embed(embed_dict)
 					# await message.channel.send(embed = new_embed)
@@ -363,4 +364,4 @@ async def on_message(message):
 						s.CORPUS_ID[str(message.author.id)] = [message.content]
 						s.CORPUS[str(message.author)] = [message.content]
 
-client.run('ODE4MjYwMTg1NDE1ODExMDcz.YEVeLg.KsD2FALRSRGsrn5mgsPj4wJYTy8')
+client.run("token")
